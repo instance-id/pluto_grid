@@ -63,6 +63,9 @@ class PlutoGridConfiguration {
   /// Height of a row.
   final double rowHeight;
 
+  /// Height of grid footer
+  final double footerCustomHeight;
+
   /// Height of column.
   final double columnHeight;
 
@@ -73,6 +76,11 @@ class PlutoGridConfiguration {
   /// If there is no titlePadding of PlutoColumn,
   /// it is the title padding of the default column. (Horizontal only)
   final double defaultColumnTitlePadding;
+
+  /// Customise column title background color
+  /// This will be the default color if a custom
+  /// color is not provided
+  final Color defaultColumnTitleBackgroundColor;
 
   /// Customise cell padding
   /// If there is no cellPadding of PlutoColumn,
@@ -131,9 +139,11 @@ class PlutoGridConfiguration {
     this.iconSize = 18,
     this.menuBackgroundColor = Colors.white,
     this.rowHeight = PlutoGridSettings.rowHeight,
+    this.footerCustomHeight = PlutoGridSettings.footerCustomHeight,
     this.columnHeight = PlutoGridSettings.rowHeight,
     this.columnFilterHeight = PlutoGridSettings.rowHeight,
     this.defaultColumnTitlePadding = PlutoGridSettings.columnTitlePadding,
+    this.defaultColumnTitleBackgroundColor = const Color(0x00000000),
     this.defaultCellPadding = PlutoGridSettings.cellPadding,
     this.enableMoveDownAfterSelecting = false,
     this.enableMoveHorizontalInEditing = false,
@@ -173,9 +183,11 @@ class PlutoGridConfiguration {
     this.iconSize = 18,
     this.menuBackgroundColor = const Color(0xFF414141),
     this.rowHeight = PlutoGridSettings.rowHeight,
+    this.footerCustomHeight = PlutoGridSettings.footerCustomHeight,
     this.columnHeight = PlutoGridSettings.rowHeight,
     this.columnFilterHeight = PlutoGridSettings.rowHeight,
     this.defaultColumnTitlePadding = PlutoGridSettings.columnTitlePadding,
+    this.defaultColumnTitleBackgroundColor = const Color(0x00000000),
     this.defaultCellPadding = PlutoGridSettings.cellPadding,
     this.enableMoveDownAfterSelecting = false,
     this.enableMoveHorizontalInEditing = false,
@@ -237,6 +249,7 @@ class PlutoGridConfiguration {
     double? iconSize,
     Color? menuBackgroundColor,
     double? rowHeight,
+    double? footerCustomHeight,
     double? columnHeight,
     double? columnFilterHeight,
     double? defaultColumnTitlePadding,
@@ -274,6 +287,7 @@ class PlutoGridConfiguration {
       iconSize: iconSize ?? this.iconSize,
       menuBackgroundColor: menuBackgroundColor ?? this.menuBackgroundColor,
       rowHeight: rowHeight ?? this.rowHeight,
+      footerCustomHeight: footerCustomHeight ?? this.footerCustomHeight,
       columnHeight: columnHeight ?? this.columnHeight,
       columnFilterHeight: columnFilterHeight ?? this.columnFilterHeight,
       defaultColumnTitlePadding:

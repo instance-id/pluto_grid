@@ -33,6 +33,10 @@ class PlutoColumn {
   /// It takes precedence over defaultColumnTitlePadding in PlutoGridConfiguration.
   double? titlePadding;
 
+  /// Customisable column title background color.
+  /// It takes precedence over defaultColumnTitleBackgroundColor in PlutoGridConfiguration.
+  Color? columnTitleBackgroundColor;
+
   /// Customize the column with TextSpan or WidgetSpan instead of the column's title string.
   ///
   /// ```
@@ -126,6 +130,7 @@ class PlutoColumn {
     this.minWidth = PlutoGridSettings.minColumnWidth,
     this.titlePadding,
     this.titleSpan,
+    this.columnTitleBackgroundColor = Colors.transparent,
     this.cellPadding,
     this.textAlign = PlutoColumnTextAlign.left,
     this.titleTextAlign = PlutoColumnTextAlign.left,

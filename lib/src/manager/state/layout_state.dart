@@ -108,7 +108,7 @@ mixin LayoutState implements IPlutoGridState {
 
   @override
   double get footerHeight =>
-      createFooter == null ? 0 : PlutoGridSettings.rowTotalHeight;
+      createFooter == null ? 0 : configuration!.footerCustomHeight;
 
   @override
   double get columnRowContainerHeight =>

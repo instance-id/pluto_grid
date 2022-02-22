@@ -314,6 +314,10 @@ class _BuildColumnWidget extends StatelessWidget {
       column.titlePadding ??
       stateManager.configuration!.defaultColumnTitlePadding;
 
+  Color get _columnTitleBackgroundColor =>
+      column.columnTitleBackgroundColor ??
+      stateManager.configuration!.defaultColumnTitleBackgroundColor;
+
   bool get showSizedBoxForIcon =>
       column.isShowRightIcon && column.titleTextAlign.isRight;
 
@@ -325,6 +329,7 @@ class _BuildColumnWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: padding),
       decoration: stateManager.configuration!.enableColumnBorder
           ? BoxDecoration(
+              color: _columnTitleBackgroundColor,
               border: Border(
                 right: BorderSide(
                   color: stateManager.configuration!.borderColor,

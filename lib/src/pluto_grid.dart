@@ -767,6 +767,9 @@ class PlutoGridSettings {
   /// Row - Default row height
   static const double rowHeight = 45.0;
 
+  /// footer - Default footer height
+  static const double footerCustomHeight = 45.0;
+
   /// Row - border width
   static const double rowBorderWidth = 1.0;
 
